@@ -48,6 +48,7 @@ jobs:
         TNAME: W1211
         KERNEL: 3.4
       run: |
+        export PTHREAD_LIBS="-lpthread"
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
         echo "configs/templates/$TNAME.config not found "
